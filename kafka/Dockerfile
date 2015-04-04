@@ -1,7 +1,7 @@
 FROM        centos
 MAINTAINER Balhau <balhau@balhau.net>
 
-RUN         yum update --assumeyes && yum install wget tar java scala --assumeyes
+RUN         yum update --assumeyes && yum install wget tar java --assumeyes
 RUN         yum install unzip openjdk-6-jdk wget curl git docker.io --assumeyes
 
 RUN wget -q -O /opt/kafka_2.10-0.8.2.1.tgz http://mirrors.fe.up.pt/pub/apache/kafka/0.8.2.1/kafka_2.10-0.8.2.1.tgz
@@ -13,7 +13,5 @@ RUN /opt/kafka_2.10-0.8.2.1/bin/kafka-server-start.sh /opt/kafka_2.10-0.8.2.1/co
 ADD start-kafka.sh /opt/start-kafka.sh
 RUN chmod +x /opt/start-kafka.sh
 
-#EXPOSE 9092
-#EXPOSE 2181
 
 ENTRYPOINT ["./opt/start-kafka.sh"]
