@@ -34,3 +34,10 @@ This is an image that runs the webservices that are hosted in the [Git WebPT Rep
     RUN       cd /var/app/webdata && wget "http://nexus.balhau.net/nexus/service/local/artifact/maven/redirect?r=snapshots&g=org.pt.pub.data&a=webpt-ws&v=LATEST" -O web-pt.jar
 
 So if a new build is uploaded for nexus you just need to destroy the image and run again **docker-compose** that a new version will automatically run on the container
+
+
+### Various
+
+To remove all **none** images
+
+    docker rmi $(docker images | grep "^<none>" | awk "{print $3}")
