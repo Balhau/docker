@@ -7,5 +7,4 @@ RUN         wget -r --no-parent -A 'epel-release-*.rpm' http://dl.fedoraproject.
 RUN         rpm -Uvh dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-*.rpm
 RUN         yum install redis --assumeyes
 
-EXPOSE      6379
-ENTRYPOINT  ["/usr/bin/redis-server"]
+ENTRYPOINT  /usr/bin/redis-server

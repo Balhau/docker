@@ -1,11 +1,9 @@
 FROM        balhau/centos
 MAINTAINER Balhau <balhau@balhau.net>
 
-RUN         yum update --assumeyes && yum install tar --assumeyes
-RUN         yum install unzip openjdk-8-jdk wget curl git docker.io --assumeyes
 
-RUN wget -q -O /opt/apache-cassandra-2.1.4-bin.tar.gz http://mirrors.fe.up.pt/pub/apache/cassandra/2.1.4/apache-cassandra-2.1.4-bin.tar.gz
-RUN tar -xzf /opt/apache-cassandra-2.1.4-bin.tar.gz -C /opt
+RUN wget http://mirrors.fe.up.pt/pub/apache/cassandra/2.2.1/apache-cassandra-2.2.1-bin.tar.gz -O  /opt/cassandra.tar.gz
+RUN cd /opt && tar -xzf /opt/cassandra.tar.gz && rm cassandra.tar.gz
 
 
-ENTRYPOINT ["/opt/apache-cassandra-2.1.4/bin/cassandra"]
+ENTRYPOINT /opt/apache-cassandra-2.2.1/bin/cassandra -f
