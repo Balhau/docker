@@ -1,4 +1,4 @@
-FROM        centos
+FROM        balhau/centos
 MAINTAINER Balhau <balhau@balhau.net>
 
 RUN         yum update --assumeyes && yum install tar --assumeyes
