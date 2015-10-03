@@ -33,5 +33,5 @@ RUN         cd /opt && wget http://mirror.cc.columbia.edu/pub/software/apache/ma
             && tar xzf apache-maven-3.0.5-bin.tar.gz -C /opt && rm apache-maven-3.0.5-bin.tar.gz \
             &&  cd /usr/local && ln -s /opt/apache-maven-3.0.5 maven
 
-ENV         M2_HOME /opt/maven
+ENV         M2_HOME /usr/local/maven
 ENV         PATH ${M2_HOME}/bin:${PATH}

@@ -5,11 +5,16 @@ redis:
 
 kafka:
   build: ./kafka
-  ports:
-    - "2181:2181"
-    - "9092:9092"
+  #ports:
+  #  - "2181:2181"
+  #  - "9092:9092"
 
-cassandra:
-  build: ./cassandra
+webpt:
+  build: ./webdata
   ports:
-    - "9160:9160"
+    - "8080"
+
+#cassandra:
+#  build: ./cassandra
+#  ports:
+#    - "9160:9160"
