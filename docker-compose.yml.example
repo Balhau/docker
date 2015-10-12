@@ -1,0 +1,5 @@
+webpt:
+  build: ./webdata
+  ports:
+    - "8080"
+
