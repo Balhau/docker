@@ -1,19 +1,10 @@
-webpt:
-  build: ./webdata
+cassandra:
+  build: ./cassandra
   ports:
-    - "8080"
-
-kafka:
-  build: ./kafka
-  ports:
-    - "9082"
-    - "2282"
+    - "9042"
+    - "7000"
+    - "7001"
+    - "7199"
+    - "9160"
   volumes:
-    - kafka/config:/opt/kafkaconfig
-
-redis:
-  build: ./redis
-  ports:
-   - "6390"
-  volumes:
-   - redis/conf:/opt/redisconf/
+  - ./cassandra/conf:/opt/apache-cassandra-3.0.0/conf
