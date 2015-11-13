@@ -1,10 +1,5 @@
-cassandra:
-  build: ./cassandra
+mongodb:
+  build: ./mongodb
   ports:
-    - "9042"
-    - "7000"
-    - "7001"
-    - "7199"
-    - "9160"
-  volumes:
-  - ./cassandra/conf:/opt/apache-cassandra-3.0.0/conf
+    - "27017"
+  
