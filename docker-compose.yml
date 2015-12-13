@@ -1,5 +1,46 @@
-mongodb:
-  build: ./mongodb
+#mongo:
+#  build: ./mongodb
+#  ports:
+#    - "80"
+#    - "27017"
+#webpt:
+#  build: ./webdata
+#  ports:
+#    - "8080"
+
+
+rabbitmq:
+  build: ./rabbitmq
   ports:
-    - "27017"
-  
+    - "25672"
+    - "5671"
+    - "5672"
+    - "4369"
+    - "15672"
+
+
+#evote:
+#  build: ./evote
+#  entrypoint: /opt/start-evote.sh
+#  ports:
+#    - "5000"
+
+#mesosmaster:
+#  build: ./mesos
+  #entrypoint: /opt/mesos-0.24.0/build/bin/mesos-master.sh  --work_dir=/var/lib/mesos
+#  entrypoint: /opt/start-master.sh
+#  volumes:
+#    - /var/lib/mesos
+#  ports:
+#    - "5050"
+
+#cassandra:
+#  build: ./cassandra
+#  ports:
+#    - "9042"
+#    - "7000"
+#    - "7001"
+#    - "7199"
+#    - "9160"
+#  volumes:
+#  - ./cassandra/conf:/opt/apache-cassandra-2.2.3/conf
