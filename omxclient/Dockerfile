@@ -15,7 +15,13 @@ RUN	pip install flask
 
 RUN pip install lxml
 
+RUN pip install pika
+
 RUN pip install --upgrade google-api-python-client
+
+RUN curl https://yt-dl.org/downloads/2016.01.29/youtube-dl -o /usr/local/bin/youtube-dl
+
+RUN chmod a+rx /usr/local/bin/youtube-dl
 
 
 RUN       mkdir /var/app

@@ -13,6 +13,9 @@ omxclient:
   build: ./omxclient
   ports:
     - "5000"
+  volumes:
+    - /home/vitorfernandes/IdeaProjects/balhau/omxpiclient:/var/app/omxclient
+    - /media/samba/hdc1/MediaLibrary/downloads:/media/samba/hdc1/MediaLibrary/downloads
 
 
 #rabbitmq:
