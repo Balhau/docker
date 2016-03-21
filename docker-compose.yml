@@ -26,6 +26,25 @@ metasploit:
 #  volumes:
 #      - ./bind/confs/:/etc/bind
 
+<<<<<<< HEAD
+=======
+nodeapp:
+  build: ./nodejsapp
+  ports:
+    - "3000"
+  volumes:
+    - "/home/vitorfernandes/IdeaProjects/balhau/nodeapp:/var/app"
+
+
+
+#omxclient:
+#  build: ./omxclient
+#  ports:
+#    - "5000"
+#  volumes:
+#    - /home/vitorfernandes/IdeaProjects/balhau/omxpiclient:/var/app/omxclient
+#    - /media/samba/hdc1/MediaLibrary/downloads:/media/samba/hdc1/MediaLibrary/downloads
+>>>>>>> dfcc759b7622c0cb174c771e6a1a9054232e30b0
 
 
 #rabbitmq:
