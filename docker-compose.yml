@@ -8,14 +8,24 @@
 #  ports:
 #    - "8080"
 
+metasploit:
+    build: ./metasploit
 
-omxclient:
-  build: ./omxclient
-  ports:
-    - "5000"
-  volumes:
-    - /home/vitorfernandes/IdeaProjects/balhau/omxpiclient:/var/app/omxclient
-    - /media/samba/hdc1/MediaLibrary/downloads:/media/samba/hdc1/MediaLibrary/downloads
+#omxclient:
+#  build: ./omxclient
+#  ports:
+#    - "5000"
+#  volumes:
+#    - /home/vitorfernandes/IdeaProjects/balhau/omxpiclient:/var/app/omxclient
+#    - /media/samba/hdc1/MediaLibrary/downloads:/media/samba/hdc1/MediaLibrary/downloads
+
+#bind:
+#  build: ./bind
+#  ports:
+#    - "53:53"
+#  volumes:
+#      - ./bind/confs/:/etc/bind
+
 
 
 #rabbitmq:
