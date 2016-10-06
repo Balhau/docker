@@ -1,0 +1,9 @@
+tsdb-server:
+  build: ./tsdb
+  #entrypoint: /opt/start-chef.sh
+  #ports:
+  #  - "8889"
+  #volumes:
+  #  - /var/run/docker.sock:/run/docker.sock
+  #  - /usr/bin/docker:/usr/bin/docker
+  #  - /sys:/sys:ro

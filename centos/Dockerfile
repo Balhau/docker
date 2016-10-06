@@ -1,22 +1,22 @@
-FROM        centos
+FROM        centos:6.7
 
 MAINTAINER Balhau <balhau@balhau.net>
 
 #Install netcat and wget utility
 
-RUN         yum install nmap-ncat --assumeyes && yum install wget --assumeyes
+RUN         yum install wget --assumeyes && yum install tar --assumeyes
 
 #Install java
 RUN         cd /opt/ \
-            && wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u60-b27/jdk-8u60-linux-x64.tar.gz" \
-            && tar xzf jdk-8u60-linux-x64.tar.gz \
-            && rm -rf  jdk-8u60-linux-x64.tar.gz \
-            && cd /opt/jdk1.8.0_60/ \
-            && alternatives --install /usr/bin/java java /opt/jdk1.8.0_60/bin/java 2 \
-            && alternatives --install /usr/bin/jar jar /opt/jdk1.8.0_60/bin/jar 2 \
-            && alternatives --install /usr/bin/javac javac /opt/jdk1.8.0_60/bin/javac 2 \
-            && alternatives --set jar /opt/jdk1.8.0_60/bin/jar \
-            && alternatives --set javac /opt/jdk1.8.0_60/bin/javac
+            && wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u101-b13/jdk-8u101-linux-x64.tar.gz" \
+            && tar xzf jdk-8u101-linux-x64.tar.gz \
+            && rm -rf  jdk-8u101-linux-x64.tar.gz \
+            && cd /opt/jdk1.8.0_101/ \
+            && alternatives --install /usr/bin/java java /opt/jdk1.8.0_101/bin/java 2 \
+            && alternatives --install /usr/bin/jar jar /opt/jdk1.8.0_101/bin/jar 2 \
+            && alternatives --install /usr/bin/javac javac /opt/jdk1.8.0_101/bin/javac 2 \
+            && alternatives --set jar /opt/jdk1.8.0_101/bin/jar \
+            && alternatives --set javac /opt/jdk1.8.0_101/bin/javac
 
 #Install git
 
