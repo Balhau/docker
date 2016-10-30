@@ -5,7 +5,7 @@ MAINTAINER Balhau <balhau@balhau.net>
 
 # Hadoop and HBase installation
 RUN mkdir /var/app && cd /var/app \
-    && wget http://mirrors.fe.up.pt/pub/apache/hbase/1.2.3/hbase-1.2.3-bin.tar.gz\
+    && wget http://mirrors.fe.up.pt/pub/apache/hbase/1.2.3/hbase-1.2.3-bin.tar.gz
 
 
 # OpenTSDB instalation
