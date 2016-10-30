@@ -1,0 +1,5 @@
+influx:
+  build: ./influx
+  ports:
+    - 8086
+    - 8083
